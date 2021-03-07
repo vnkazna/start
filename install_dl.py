@@ -45,7 +45,7 @@ u.close()
 os.remove('//192.168.0.162/Soft/TestIPS/auto/ip.txt')
 os.remove('//192.168.0.162/Soft/TestIPS/auto/usr.txt')
 os.chdir('C:/')
-psw="Password!"
+psw=""
 command0="cmdkey /generic:'{0}' /user:'{1}' /pass:'{2}'".format(ip, usr, psw)
 print("IP адрес:", ip, "\nЛогин:", usr, "\nПароль:", psw)
 command1=("mstsc /v:%s" % ip)
