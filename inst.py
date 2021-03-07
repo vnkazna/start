@@ -27,7 +27,7 @@ ver.close()
 
 print('Будет установлен',bdt)
 
-conn=pymysql.connect(host='192.168.130.153',user='mysql', password='mysql', database='otis')
+conn=pymysql.connect(host='192.168.130.153',user='mysql', password='', database='otis')
 cur1=conn.cursor()
 #cur1.execute("create table autoinstall (id INT AUTO_INCREMENT PRIMARY KEY, build VARCHAR(255), status VARCHAR(11))")
 cur1.execute("insert into autoinstall (build, status, hostname, os, host_ip) VALUES (%s, 2, %s, %s, %s)", (bn, info, osv, ip))
