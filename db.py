@@ -61,7 +61,7 @@ def get_html(html_url, timeout=10, decode='utf-8'):
                 print('Has tried {0} times to access url {1}, all failed!'.format(MAX_RETRY, html_url))
                 return None
 
-conn=pymysql.connect(host='192.168.130.153',user='mysql', password='mysql', database='otis')
+conn=pymysql.connect(host='192.168.130.153',user='mysql', password='', database='otis')
 cur1=conn.cursor()
 #cur1.execute("create table autoinstall (id INT AUTO_INCREMENT PRIMARY KEY, build VARCHAR(255), status VARCHAR(11))")
 cur1.execute("UPDATE autoinstall SET status= '1' WHERE status='2' AND hostname=%s", info)
