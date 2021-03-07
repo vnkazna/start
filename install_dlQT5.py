@@ -137,7 +137,7 @@ class ComboBoxDemo(QMainWindow, QTreeWidget):
         bnlist=bnlist[::-1]
         return bnlist
     def esxi(self):
-        connect = SmartConnectNoSSL(host='192.168.13.138', user='kvn', pwd='5745Ayc')
+        connect = SmartConnectNoSSL(host='192.168.13.138', user='kvn', pwd='')
         content = connect.content
         container = content.viewManager.CreateContainerView(content.rootFolder, [vim.VirtualMachine], True)
         osv=[]
@@ -149,7 +149,7 @@ class ComboBoxDemo(QMainWindow, QTreeWidget):
         Disconnect(connect)
         return osv
     def autorization(self, vm_name, lang):
-        connect = SmartConnectNoSSL(host='192.168.13.138', user='kvn', pwd='5745Ayc')
+        connect = SmartConnectNoSSL(host='192.168.13.138', user='kvn', pwd='')
         content = connect.content
         container = content.viewManager.CreateContainerView(content.rootFolder, [vim.VirtualMachine], True)
         vm_list=container.view
@@ -214,7 +214,7 @@ class ComboBoxDemo(QMainWindow, QTreeWidget):
         self.printInbox('Установка будет быполнена на следующие машины:')
         host = '192.168.13.138'
         username = 'kvn'
-        password = '5745Ayc'
+        password = ''
         snapshot_name = 'install'
         
         with VMWareClient(host, username, password) as client:
@@ -313,7 +313,7 @@ class ComboBoxDemo(QMainWindow, QTreeWidget):
             #self.percentage = 0
         else: self.percentage += 2
     def fix_reboot_stuck(self, vm_name):
-        connect = SmartConnectNoSSL(host='192.168.13.138', user='kvn', pwd='5745Ayc')
+        connect = SmartConnectNoSSL(host='192.168.13.138', user='kvn', pwd='')
         content = connect.content
         container = content.viewManager.CreateContainerView(content.rootFolder, [vim.VirtualMachine], True)
         vm_list=container.view
